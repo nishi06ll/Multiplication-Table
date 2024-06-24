@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Multiplication Table</title>
+	<style>
+		body {
+			font-family: 'Arial', sans-serif;
+			background-color: #f0f4f8;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			margin: 0;
+			flex-direction: column;
+			background-color: lightsalmon;
+		}
+		h2 {
+			color: #333;
+			margin-bottom: 20px;
+		}
+		input[type="number"] {
+			width: 100px;
+			padding: 10px;
+			border: 2px solid #ccc;
+			border-radius: 5px;
+			font-size: 16px;
+		}
+		button {
+			padding: 10px 20px;
+			font-size: 16px;
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			margin-top: 10px;
+		}
+		button:hover {
+			background-color: #45a049;
+		}
+		#nish {
+			margin-top: 20px;
+			padding: 20px;
+			background-color: #fff;
+			border: 2px solid #ccc;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			width: 200px;
+			text-align: left;
+		}
+		#nish p {
+			margin: 5px 0;
+			font-size: 18px;
+			color: #333;
+		}
+	</style>
+</head>
+<body>
+	<h2>Multiplication Table</h2>
+	<input type="number" id="nishu" placeholder="Enter a number"><br><br>
+	<button onclick="nish()">Generate</button>
+	<div id="nish"></div>
+
+	<script type="text/javascript">
+		function nish() {
+			var a = document.getElementById("nishu").value;
+			var b = document.getElementById("nish");
+			var i;
+			b.innerHTML = "";
+			for (i = 1; i <= 10; i++) {
+				b.innerHTML += "<p>" + a + " x " + i + " = " + a * i + "</p>";
+			}
+		}
+	</script>
+</body>
+</html>
